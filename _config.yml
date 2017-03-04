@@ -16,10 +16,11 @@
 title: Developers-Best-Friend UX/UI/Product designer based in Ukraine
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  I Help Startups & Digital Businesses to climb their own mountains throught all of the checkpoints like: market research, mvp development, competitors-kick-ass-management, onboarding, scalable design for fast iterations, lead generation.
+  I Help Startups & Digital Businesses to climb their own mountains throught all of the checkpoints like: market research, mvp development, onboarding, scalable design for fast iterations, lead generation.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://leoosa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
+author: Leo Osa
 #social accounts
 medium: 
   name: medium
@@ -37,10 +38,10 @@ linkedin:
   name: linkedin
   username: ossarchouk
   icon: fa-linkedin
-twitter: 
-  name: twitter
-  username: illya_o
-  icon: fa-twitter
+angellist: 
+  name: angellist
+  username: leo-osa
+  icon: fa-angellist
 
 # Build settings
 markdown: kramdown
