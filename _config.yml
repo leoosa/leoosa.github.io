@@ -19,10 +19,28 @@ description: > # this means to ignore newlines until "baseurl:"
   I Help Startups & Digital Businesses to climb their own mountains throught all of the checkpoints like: market research, mvp development, competitors-kick-ass-management, onboarding, scalable design for fast iterations, lead generation.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://leoosa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: illya_o
-github_username:  leoosa
-dribbble_username:  leoosa
-linkedin_username:  ossarchouk
+
+#social accounts
+medium: 
+  name: medium
+  username: leo_osa
+  icon: fa-medium
+github: 
+  name: github
+  username: leoosa
+  icon: fa-github
+dribbble: 
+  name: dribbble
+  username: leoosa
+  icon: fa-dribbble
+linkedin: 
+  name: linkedin
+  username: ossarchouk
+  icon: fa-linkedin
+twitter: 
+  name: twitter
+  username: illya_o
+  icon: fa-twitter
 
 # Build settings
 markdown: kramdown
