@@ -50,7 +50,7 @@ exclude:
 include: ["_pages"]
 sass:
   style: compressed
-
+google_analytics: UA-42310833-1
 defaults:
   -
     scope:
