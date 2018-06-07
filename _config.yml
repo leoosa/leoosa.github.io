@@ -3,8 +3,10 @@
 title: ШТАМП СТОР
 twitter: "http://twitter.com/bryanschuetz"
 github: "http://github.com/bryanschuetz"
-baseurl: "https://leoosa.github.io"
-url: "https://leoosa.github.io/"
+# baseurl: "http://localhost:8080"
+# url: "http://localhost:8080/"
+baseurl: "http://stampstore.com.ua"
+url: "http://stampstore.com.ua/"
 
 # Collections
 collections:
