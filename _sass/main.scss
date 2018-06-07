@@ -1,0 +1,179 @@
+@import "_variables";
+$gray-color: #989faf;
+// Variables and mixins
+// @import "../node_modules/spectre.css/src/_variables";
+@import "../node_modules/spectre.css/src/_mixins";
+
+/*! Spectre.css v#{$version} | MIT License | github.com/picturepan2/spectre */
+// Reset and dependencies
+@import "../node_modules/spectre.css/src/_normalize";
+@import "../node_modules/spectre.css/src/_base";
+
+// Elements
+@import "../node_modules/spectre.css/src/_typography";
+// @import "../node_modules/spectre.css/src/_asian";
+// @import "../node_modules/spectre.css/src/_tables";
+@import "../node_modules/spectre.css/src/_buttons";
+@import "../node_modules/spectre.css/src/_forms";
+@import "../node_modules/spectre.css/src/_labels";
+@import "../node_modules/spectre.css/src/_codes";
+@import "../node_modules/spectre.css/src/_media";
+
+// Layout
+@import "../node_modules/spectre.css/src/_layout";
+@import "../node_modules/spectre.css/src/_navbar";
+
+// Components
+@import "../node_modules/spectre.css/src/_accordions";
+// @import "../node_modules/spectre.css/src/_avatars";
+// @import "../node_modules/spectre.css/src/_badges";
+@import "../node_modules/spectre.css/src/_breadcrumbs";
+// @import "../node_modules/spectre.css/src/_bars";
+// @import "../node_modules/spectre.css/src/_cards";
+// @import "../node_modules/spectre.css/src/_chips";
+@import "../node_modules/spectre.css/src/_dropdowns";
+// @import "../node_modules/spectre.css/src/_empty";
+@import "../node_modules/spectre.css/src/_menus";
+@import "../node_modules/spectre.css/src/_modals";
+@import "../node_modules/spectre.css/src/_navs";
+// @import "../node_modules/spectre.css/src/_pagination";
+// @import "../node_modules/spectre.css/src/_panels";
+// @import "../node_modules/spectre.css/src/_popovers";
+// @import "../node_modules/spectre.css/src/_steps";
+// @import "../node_modules/spectre.css/src/_tabs";
+@import "../node_modules/spectre.css/src/_tiles";
+// @import "../node_modules/spectre.css/src/_toasts";
+@import "../node_modules/spectre.css/src/_tooltips";
+
+// Utility classes
+@import "../node_modules/spectre.css/src/_animations";
+@import "../node_modules/spectre.css/src/_utilities";
+// @import "../node_modules/spectre.css/src/spectre";
+@import "../node_modules/spectre.css/src/spectre-icons";
+@import "_mobile";
+body, html {
+	-webkit-font-smoothing: antialiased;
+}
+a:visited {
+	opacity:.4;
+}
+h1,
+.h1 {
+  font-size: 2.1rem;
+}
+.py-5 {
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+.wrapper {
+	max-width:1000px;
+	margin:0 auto;
+}
+.topbar {
+	background:$dark-color;
+	color: $light-color;
+	height:3rem;
+	font-size:.7rem;
+	.wrapper, .navbar {height:100%;}
+	a {
+		color: $gray-color;
+		text-decoration:none;
+		transition: color 0.3s;
+		&:hover, &:active {
+			color: $light-color;
+		}
+	}
+	.dropdown .menu > li > a {
+		color:$dark-color;
+		&:hover, &:focus {
+			color:$primary-color;
+		}
+	}
+}
+header {
+	border-bottom:1px solid $gray-color-light;
+	position:relative;
+	z-index:1;
+	.btn.px-2 {
+		font-weight:500;
+		box-shadow: 0px 3px 12px rgba(51, 51, 51, 0.19);
+		border-radius: 3px;
+		border: none;
+		font-weight: 500;
+	}
+	.dropdown {
+		a:hover+.menu {
+			display:block;
+		}
+	}
+	.menu .menu-item>a, .navbar .btn-link {
+		&:focus, &:hover {
+			background: #478eff12;
+		}
+	}
+}
+.navbar-brand > svg {
+  	margin-top:8px;
+}
+footer {
+	padding-top:3rem;
+	padding-bottom:2rem;
+	.column > a {
+		white-space: nowrap;
+    	font-size: .7rem;
+    	color: $gray-color;
+    	display:block;
+    	margin:.4rem 0;
+	}
+	h6 > a {
+		color:$dark-color;
+	}
+}
+.navbar .navbar-brand {
+	white-space: nowrap;
+}
+.btn {
+	// font-weight:800;
+}
+.menu {
+	transform: none;
+}
+.menu .menu-item>a {
+	white-space:nowrap;
+}
+.hero-unit {
+    position: relative;
+    overflow: hidden;
+	h1, .h1, p {
+		font-style:italic;
+	}
+	> .jumbotron {
+		-webkit-transform: rotate(-8deg);
+	    -moz-transform: rotate(-8deg);
+	    -ms-transform: rotate(-8deg);
+	    -o-transform: rotate(-8deg);
+	    transform: rotate(-8deg);
+
+
+	}
+	.bg {
+		position:absolute;
+		left:0;right:0;top:0;
+		mix-blend-mode: screen;
+		img {min-width:100%;}
+	}
+}
+.dropdown.drowdown-right {
+	.menu {
+		left:auto;
+		right:0;
+	}
+}
+.product {
+	padding-top:6rem;
+	padding-bottom:6rem;
+}
+.sitemap {
+	a {display:block;}
+}

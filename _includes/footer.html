@@ -1,0 +1,52 @@
+<footer>
+	<div class="wrapper">
+		<div class="divider"></div>
+		<div class="py-5"></div>
+		<div class="columns">
+			<div class="column">
+		  		<h6><a href="{{ site.baseurl }}/qa" alt="Изготовление печатей">Вопросы и ответы</a></h6>
+		  		<div class="p-2"></div>
+		  		<h6><a href="{{ site.baseurl }}/dostavka-oplata/">Доставка и оплата</a></h6>
+		  		<div class="p-2"></div>
+		  		<h6><a href="#" alt="Изготовление печатей">Контакты</a></h6>
+		  		<div class="p-2"></div>
+		  		<h6>Заказать в других местах</h6>
+		  		<div class="p-2"></div>
+		  		{% for item in site.places %}
+					<a href="{{ site.baseurl }}{{ item.url }}" title="Изготовление печатей {{ item.title }}">Печати {{ item.title }}</a>
+				{% endfor %}
+				<div class="p-2"></div>
+				<small><a href="{{ site.baseurl }}/sitemap.html" alt="Карта сайта">Карта сайта</a> | <a href="{{ site.baseurl }}/sitemap.xml" alt="XML">XML</a></small>
+				
+		  	</div>
+		  	<div class="column">
+		  		<h6>Изготовление</h6>
+		  		<div class="p-2"></div>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-pechatej/" title="Изготовление печатей">Изготовление печатей</a>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-shtampov/" title="Изготовление штампов">Изготовление штампов</a>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-pechatej/pechat-predprinimatelya/" title="Печати для предпринимателей (СПД)">Печати для предпринимателей</a>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-pechatej/pechati-yuridicheskix-lic-ooo-chp-chao-pat-i-dr/" title="Печати для юридических лиц (ООО, ЧП, ЧАО, ПАО)">Печати для юридических лиц</a>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-pechatej/izgotovlenie-dopolnitelnyx-pechatej/" title="Дополнительные печати для документов">Печати для документов</a>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-pechatej/izgotovlenie-pechatej-dlya-advokatov/" title="Печати для адвокатов">Печати для адвокатов</a>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-pechatej/pechati-arxitektorov-i-inzhenerov/" title="Печати для архитектора, инженера или проектировщика">Печати для архитекторов и инженеров</a>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-pechatej/izgotovlenie-pechatej-dlya-notariusov/" title="Печати для нотариусов">Печати для нотариусов</a>
+		  		<a href="{{ site.baseurl }}/izgotovlenie-pechatej/izgotovlenie-pechatej-dlya-vrachej/" title="Печати для врачей">Печати для врачей</a>
+		  	</div>
+		  	
+		  	<div class="column">
+		  		<h6>Выгодное сотрудничество</h6>
+		  		<div class="p-2"></div>
+		  		<a href="#" alt="Изготовление печатей">Для юридических компаний</a>
+		  		<a href="#" alt="Изготовление печатей">Для страховых компаний</a>
+		  		<a href="#" alt="Изготовление печатей">Для рекламных компаний</a>
+		  		<a href="#" alt="Изготовление печатей">Оптовое предложение</a>
+		  	</div>
+		</div>
+		<div class="py-5"></div>
+		<div class="columns">
+			<div class="column">
+				<small>{{ site.data.app.description | markdownify }}</small>
+			</div>
+		</div>
+	</div> 
+</footer>

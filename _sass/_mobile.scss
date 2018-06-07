@@ -1,0 +1,62 @@
+@import "_variables";
+@media screen and (max-width: $responsive-breakpoint) {
+  // body { background: red; }
+  .topbar {
+  	position:fixed;
+  	bottom:0;
+  	left:0;
+  	right:0;
+  }
+  header {
+  	min-height: 55px;
+  	padding-right: 15px;
+  }
+  .navbar-brand > svg {
+  	max-width: 130px;
+  }
+  html, body {
+  	font-size:.95rem;
+  }
+  p {
+  	font-size: .85rem;
+  }
+  small>p{
+  	font-size: .55rem;
+    padding-bottom: 1rem;
+  }
+
+  .wrapper {
+  	padding: 0 .7rem;
+  }
+  .hero-unit {
+  	padding-bottom: 3.5rem;
+    padding-top: 3.5rem;
+  }
+
+}
+@media screen and (min-width: $responsive-breakpoint+1) {
+	header {
+  		min-height: 80px;
+  		.btn:not(.btn-link) {
+			padding-left:2rem;
+			padding-right:2rem;
+		}
+		.navbar-section >.btn-link:not(.btn-action), .navbar-section > .dropdown {
+			margin: 0 0 0 1.5rem;
+		}
+  	}
+  	.wrapper {
+  		padding: 0 1rem;
+  	}	
+  	.hero-unit {
+  		h1, .h1, p {
+			font-style:italic;
+			max-width: 50%;
+	    	margin-left: 25%;
+		}
+		>.jumbotron {
+			padding-bottom: 7.5rem;
+    		padding-top: 7.5rem;
+		}
+  	}
+}

@@ -1,0 +1,32 @@
+---
+layout: landing
+title: Карта сайта
+---
+  <div class="sitemap">
+  	<h3>Страницы</h3>
+	  {% for page in site.pages %}
+	    {% unless page.sitemap.exclude == "yes" %}
+	    <a href="{{ site.baseurl }}{{ page.url | remove: "index.html" }}">{{ page.title }}</a>
+	    {% endunless %}
+	  {% endfor %}
+	  <h3>Эскизы печатей</h3>
+	  {% for pechat in site.pechati %}
+	    {% unless pechat.published == false %}
+	    <a href="{{ site.baseurl }}{{ pechat.url }}">Печать {{ pechat.categories }} {{ pechat.title }}</a>
+	    {% endunless %}
+	  {% endfor %}
+	  <h3>Статьи</h3>
+	  {% for post in site.posts %}
+	    {% unless post.published == false %}
+	    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+	    {% endunless %}
+	  {% endfor %}
+	  <h3>Изготовление печатей в других городах и местах</h3>
+	  {% for place in site.places %}
+	    {% unless place.published == false %}
+	   	<a href="{{ site.baseurl }}{{ place.url }}">Заказать печать {{ place.title }}</a>
+	    {% endunless %}
+	    </ul>
+	  {% endfor %}
+  </div>
+  
