@@ -1808,6 +1808,7 @@ module.exports = Component.exports
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(process, global, setImmediate) {/*!
  * Vue.js v2.5.16
  * (c) 2014-2018 Evan You
@@ -12765,7 +12766,7 @@ function getOuterHTML (el) {
 
 Vue.compile = compileToFunctions;
 
-/* harmony default export */ __webpack_exports__["a"] = (Vue);
+/* harmony default export */ __webpack_exports__["default"] = (Vue);
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2), __webpack_require__(0), __webpack_require__(13).setImmediate))
 
@@ -12795,48 +12796,69 @@ g,0<d.length&&(d=za[d[0]])&&(a.c[e]=d))}a.c[e]||(d=za[e])&&(a.c[e]=d);for(d=0;d<
 
 /***/ }),
 /* 8 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webfontloader__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webfontloader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_webfontloader__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_marked__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_marked___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_marked__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_vue__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_app_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_modal_vue__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_modal_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_modal_vue__);
-// 🎌 IMPORT MODULES, COMPONENTS AND WHATNOT. CREATE THE VUE INSTANCE 🎌
 
 
+var _vue = __webpack_require__(6);
 
+var _vue2 = _interopRequireDefault(_vue);
 
+var _webfontloader = __webpack_require__(7);
 
+var _webfontloader2 = _interopRequireDefault(_webfontloader);
+
+var _marked = __webpack_require__(1);
+
+var _marked2 = _interopRequireDefault(_marked);
+
+var _app = __webpack_require__(4);
+
+var _app2 = _interopRequireDefault(_app);
+
+var _modal = __webpack_require__(5);
+
+var _modal2 = _interopRequireDefault(_modal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // 🎌 GOOGLE FONTS, CAUSE TYPOGRAPHY 🎌
-__WEBPACK_IMPORTED_MODULE_1_webfontloader___default.a.load({
+_webfontloader2.default.load({
   google: {
     families: ['Montserrat:400,500,500i,700,800']
   }
-});
+}); // 🎌 IMPORT MODULES, COMPONENTS AND WHATNOT. CREATE THE VUE INSTANCE 🎌
 
-var app = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
+
+var app = new _vue2.default({
   el: '#content',
-  render: h => h(__WEBPACK_IMPORTED_MODULE_3__components_app_vue___default.a)
+  render: function render(h) {
+    return h(_app2.default);
+  }
 });
 
 /***/ }),
 /* 9 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__build_data_data_json__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__build_data_data_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__build_data_data_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_marked__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_marked___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_marked__);
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _data = __webpack_require__(11);
+
+var _data2 = _interopRequireDefault(_data);
+
+var _marked = __webpack_require__(1);
+
+var _marked2 = _interopRequireDefault(_marked);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 //
 //
 //
@@ -12867,77 +12889,82 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data() {
+exports.default = {
+  data: function data() {
     return {
-      siteData: __WEBPACK_IMPORTED_MODULE_0__build_data_data_json__["default"],
+      siteData: _data2.default,
       newItem: 'Data binding',
       newDynamic: [],
       isActive: true
     };
   },
+
   filters: {
-    capitalize: function (value) {
+    capitalize: function capitalize(value) {
       if (!value) return '';
       value = value.toString();
       return value.charAt(0).toUpperCase() + value.slice(1);
     },
-    md: function (val) {
-      return __WEBPACK_IMPORTED_MODULE_1_marked___default()(val);
+    md: function md(val) {
+      return (0, _marked2.default)(val);
     }
   },
   computed: {
-    rawdescription: function () {
-      return __WEBPACK_IMPORTED_MODULE_1_marked___default()(__WEBPACK_IMPORTED_MODULE_0__build_data_data_json__["default"].description);
+    rawdescription: function rawdescription() {
+      return (0, _marked2.default)(_data2.default.description);
     }
   },
   methods: {
-    addItem() {
+    addItem: function addItem() {
       this.newDynamic.push(this.newItem);
       this.newItem = '';
     }
   }
-});
+};
 
 /***/ }),
 /* 10 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_marked__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_marked___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_marked__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data() {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _marked = __webpack_require__(1);
+
+var _marked2 = _interopRequireDefault(_marked);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  data: function data() {
     return {
       nav: true
     };
   }
-});
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 11 */
