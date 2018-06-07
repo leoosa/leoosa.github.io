@@ -5,8 +5,8 @@ twitter: "http://twitter.com/bryanschuetz"
 github: "http://github.com/bryanschuetz"
 # baseurl: "http://localhost:8080"
 # url: "http://localhost:8080/"
-baseurl: "//stampstore.com.ua"
-url: "//stampstore.com.ua/"
+baseurl: "https://stampstore.com.ua"
+url: "https://stampstore.com.ua/"
 
 # Collections
 collections:
