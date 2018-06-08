@@ -1,10 +1,9 @@
 ---
-layout: page
 title: Вопросы и ответы
 permalink: "/qa/"
-breadcrumb: "Вопросы и ответы про печати"
+layout: page
+breadcrumb: Вопросы и ответы про печати
 ---
-
 
 <details class="accordion" open>
   <summary class="accordion-header">

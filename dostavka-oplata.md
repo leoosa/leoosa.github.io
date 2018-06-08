@@ -1,11 +1,10 @@
 ---
-layout: landing
 title: Доставка и оплата
+permalink: "/dostavka-oplata/"
+layout: landing
 color: FFEE92
 text-color: 2E3033
-permalink: "/dostavka-oplata/"
 ---
-
 
 ## Доставка печатей и штампов ##
 ##### По Киеву #####
