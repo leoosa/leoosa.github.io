@@ -1,6 +1,7 @@
 ---
 layout: index
 ---
+
 <!-- <div class="copy">
   <h2>{{ site.data.app.title }}</h2>
   <p>{{ site.data.app.description | markdownify }}</p>

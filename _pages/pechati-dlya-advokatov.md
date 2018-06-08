@@ -1,10 +1,12 @@
 ---
-layout: landing
 title: Изготовление печатей для адвокатов
-description: "Срочное изготовим печать адвоката. Выбор эскизов. Печати для адвокатов. Доставка по Украине - 1 день. Заказать онлайн за 1 мин с бесплатной доставкой!"
 permalink: "/izgotovlenie-pechatej/izgotovlenie-pechatej-dlya-advokatov/"
-breadcrumb: "Печати для адвокатов"
-description: "I created this beautiful looking Jekyll blog by forking a repository. You can also fork it to make it yours. Jekyll is a simple blog generator. The community is growing and the number of plugins is also growing. I have moved all my blogs to Jekyll!"
+layout: landing
+description: I created this beautiful looking Jekyll blog by forking a repository.
+  You can also fork it to make it yours. Jekyll is a simple blog generator. The community
+  is growing and the number of plugins is also growing. I have moved all my blogs
+  to Jekyll!
+breadcrumb: Печати для адвокатов
 ---
 
 ## Изготовление печати для адвоката ##
