@@ -1,61 +1,56 @@
-
-# Info
+---
 title: ШТАМП СТОР
-twitter: ""
-github: ""
-# baseurl: "http://localhost:8080"
-# url: "http://localhost:8080/"
-baseurl: "/"
-url: "https://stampstore.com.ua"
-
-# Collections
+timezone: Europe/Kiev
 collections:
   posts:
     title: Posts
     output: true
-    permalink: "/news/:title"
-  pechati:
-    title: Печати
+  uploads:
+    title: Uploads
     output: true
-    permalink: "/izgotovlenie-pechatej/:title/"
   places:
     title: Изготовление печатей в
     output: true
     permalink: "/izgotovlenie-pechatej/:title/"
-
-# Settings
+  pechati:
+    title: Печати
+    output: true
+    permalink: "/izgotovlenie-pechatej/:title/"
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: landing
+    category: project
+twitter: ''
+github: ''
+baseurl: "/"
+url: https://stampstore.com.ua
 markdown: kramdown
-timezone: Europe/Kiev
 locale: RU_ru
 lang: ru
 plugins:
-  - jekyll-seo-tag
+- jekyll-seo-tag
 excerpt_seperator: "<!--more-->"
 destination: "./build"
 permalink: "/:title/"
 exclude:
-  - components
-  - Gemfile
-  - Gemfile.lock
-  - ".gitignore"
-  - node_modules
-  - js/source.js
-  - webpack.config.js
-  - package.json
-  - .jshintrc
-  - .sass-cache
-  - browser-sync.js
-  - npm-debug.log
-  - README.MD
-include: ["_pages"]
+- components
+- Gemfile
+- Gemfile.lock
+- ".gitignore"
+- node_modules
+- js/source.js
+- webpack.config.js
+- package.json
+- ".jshintrc"
+- ".sass-cache"
+- browser-sync.js
+- npm-debug.log
+- README.MD
+include:
+- _pages
 sass:
   style: compressed
 google_analytics: UA-42310833-1
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "landing"
-      category: "project"
