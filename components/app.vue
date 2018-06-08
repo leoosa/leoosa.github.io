@@ -18,7 +18,7 @@
         <ul>
           <li v-for="benefit in siteData.dynamicBenefits">{{ benefit | capitalize }}</li>
           <li v-for="item in newDynamic">{{ item }}</li>
-          <li><input label="More great things about static sites"type="" name="" v-model="newItem">
+          <li><input label="More great things about static sites" type="" name="" v-model="newItem">
         <button v-on:click="addItem" placeholder="Another benefit">Add</button></li>
         </ul>
       </div>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import siteData from '../build/data/data.json'
+import siteData from '!json!../build/data/data.json'
 import Marked from 'marked'
 export default {
   data () {

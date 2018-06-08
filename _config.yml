@@ -1,12 +1,12 @@
 
 # Info
 title: ШТАМП СТОР
-twitter: "http://twitter.com/bryanschuetz"
-github: "http://github.com/bryanschuetz"
+twitter: ""
+github: ""
 # baseurl: "http://localhost:8080"
 # url: "http://localhost:8080/"
 baseurl: "/"
-url: "https://www.stampstore.com.ua"
+url: "https://stampstore.com.ua"
 
 # Collections
 collections:
@@ -32,7 +32,7 @@ plugins:
   - jekyll-seo-tag
 excerpt_seperator: "<!--more-->"
 destination: "./build"
-permalink: "/:titsle"
+permalink: "/:title/"
 exclude:
   - components
   - Gemfile

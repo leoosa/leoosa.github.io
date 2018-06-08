@@ -57,10 +57,7 @@ body, html {
 a:visited {
 	opacity:.4;
 }
-h1,
-.h1 {
-  font-size: 2.1rem;
-}
+
 .py-5 {
 	padding-top:1rem;
 	padding-bottom:1rem;
@@ -121,7 +118,7 @@ footer {
 	padding-bottom:2rem;
 	.column > a {
 		white-space: nowrap;
-    	font-size: .7rem;
+    	// font-size: .7rem;
     	color: $gray-color;
     	display:block;
     	margin:.4rem 0;
