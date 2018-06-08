@@ -9,7 +9,7 @@ layout: default
       </div>
     {% endif %}
     <figure class="figure bg text-center">
-    	<img class="img-responsive" src="{{ site.baseurl }}/assets/bg.svg" alt="">
+    	<img class="img-responsive" src="{{ site.url }}/assets/bg.svg" alt="">
 	</figure>
 </div>
 <div class="wrapper">  {% include breadcrumbs.html %}</div>
@@ -22,7 +22,7 @@ layout: default
 			<div class="column text-center">
 				<a href="{{ item.url }}">
 				<figure class="figure text-center">
-	  				<img src="{{ site.url }}/assets/img/{{ item.img }}" class="class="img-fit-cover" alt="Печать {{ item.title }}">
+	  				<img src="{{ site.url }}/assets/img/{{ item.img }}" class="img-fit-cover" alt="Печать {{ item.title }}">
 	  				<figcaption class="figure-caption text-center">Эскиз печати №{{ item.title }}</figcaption>
 	  			</figure>
 				<h5 class="h6">Печать {{ item.categories }} {{ item.title }}</h5>

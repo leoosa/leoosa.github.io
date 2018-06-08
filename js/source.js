@@ -2,8 +2,8 @@
 import Vue from 'vue'
 import WebFont from 'webfontloader'
 import Marked from 'marked'
-import App from '../components/app.vue'
-import Modal from '../components/modal.vue'
+// import App from '../components/app.vue'
+// import Modal from '../components/modal.vue'
 
 // 🎌 GOOGLE FONTS, CAUSE TYPOGRAPHY 🎌
 WebFont.load({
@@ -12,7 +12,7 @@ WebFont.load({
  }
 });
 
-var app = new Vue({
-  el: '#content',
-  render: h => h(App),
-})
+// var app = new Vue({
+//   el: '#content',
+//   render: h => h(App),
+// })
