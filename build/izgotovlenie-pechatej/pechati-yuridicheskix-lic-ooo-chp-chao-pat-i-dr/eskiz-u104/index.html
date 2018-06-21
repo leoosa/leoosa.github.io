@@ -73,7 +73,7 @@
 			</div>
 			<div class="navbar-section hide-md text-right">
 				<div class="dropdown drowdown-right">
-				  +38(044)...<a href="#" class="dropdown-toggle" tabindex="0">
+				  +38(044)...<a href="#" class="dropdown-toggle" id="phones" tabindex="0">
 				    показать номер <i class="icon icon-caret"></i>
 				  </a>
 				  <!-- menu component -->
@@ -417,7 +417,7 @@
         
         
         <div class="py-2"></div>
-        <form action="https://formspree.io/m0934359347@gmail.com" method="POST">
+        <form action="https://formspree.io/m0934359347@gmail.com" method="POST" id="order-form">
           <input type="text" name="product" value="Печать для юрлиц Ю-104" hidden>
     			<i>Выбрать оснатку</i>
     			<div class="form-group">
@@ -476,7 +476,7 @@
             <input type="checkbox" value="agree" v-model="checked">
             <i class="form-icon"></i> <small><b>Я загрузил(a) </b> все <a href="#docs" v-on:click="flash=!flash">необходимые документы</a></small>
           </label>
-    			<button class="btn btn-primary btn-lg" :disabled="!isDisabled">Сделать заказ</button>
+    			<button class="btn btn-primary btn-lg" id="place-order" :disabled="!isDisabled">Сделать заказ</button>
         </form>
   		</div>
   	</div>

@@ -1,5 +1,8 @@
 ---
 title: siteData
+layout: 
+sitemap:
+  exclude: 'yes'
 ---
 
 {{ site.data.app | jsonify }}
