@@ -67,6 +67,9 @@ a:visited {
 	max-width:1000px;
 	margin:0 auto;
 }
+.navbar, .topbar {
+	z-index: 10;
+}
 .topbar {
 	background:$dark-color;
 	color: $light-color;
@@ -103,6 +106,7 @@ header {
 		a:hover+.menu {
 			display:block;
 		}
+		z-index:5;
 	}
 	.menu .menu-item>a, .navbar .btn-link {
 		&:focus, &:hover {
@@ -125,6 +129,10 @@ footer {
 	}
 	h6 > a {
 		color:$dark-color;
+	}
+	.column.col-7>a {
+	    width: 50%;
+	    float: left;
 	}
 }
 .navbar .navbar-brand {
@@ -159,6 +167,34 @@ footer {
 		left:0;right:0;top:0;
 		mix-blend-mode: screen;
 		img {min-width:100%;}
+		&.video-bg {
+			mix-blend-mode: soft-light;
+			min-height: 100%;
+			min-width: 100%;
+			width: auto; 
+			height: auto;
+			top: 90%;
+			margin-top: -35%;
+		}
+	}
+	.btn.btn-lg {
+		position:relative;
+		z-index:1;
+		background: #FFEE92;
+		color: #454d5c;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		font-weight: bold;
+		border-radius: 6px;
+		&:hover {
+			opacity:.9;
+		}
+	}
+	&.place {
+		> .jumbotron {
+			padding-bottom:2rem;
+		}
+		padding-bottom:7.5rem;
 	}
 }
 .dropdown.drowdown-right {
@@ -168,9 +204,66 @@ footer {
 	}
 }
 .product {
-	padding-top:6rem;
+	padding-top:3rem;
 	padding-bottom:6rem;
 }
 .sitemap {
 	a {display:block;}
+}
+.pechat {
+	.figure .eskiz {
+		fill:#2378ff;
+		&.eskiz-bg {
+			position:absolute;
+		}
+		&.eskiz-svg {
+			position:relative;
+			&:before {
+				content: '';
+				position:absolute;
+				z-index:0;
+				background:#fff;
+				display:block;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+			}
+		}
+	}
+	svg.eskiz {
+		z-index: 1;
+    	position: relative;
+	}
+}
+.stamp_color {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin:0 .2rem;
+    border: 2px white;
+    border-radius: 25px;
+    box-shadow: 1px 1px 6px rgba(0,0,0,.1);
+    &:hover {
+    	transform:scale(1.2);
+    }
+}
+.osnastka > img {
+    height: 11rem;
+    margin: 0 auto;
+    display: inherit;
+}
+.upload {
+	padding: 2rem;
+	background: #478eff1a;
+	margin-bottom:1rem;
+    border: 2px dashed rgba(71, 142, 255, 0.29);
+}
+#docs {
+	transition: all .4s;
+	background:#fff;
+	&.flashing {
+		background-color: #ffd80038;
+		padding:1rem;
+	}
 }

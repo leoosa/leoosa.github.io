@@ -3,37 +3,122 @@ layout: default
 ---
 
 <div class="wrapper">  {% include breadcrumbs.html %}</div>
+
   <div class="product product-pechat wrapper">
   	<div class="columns">
-  		<div class="column">
-  			<figure class="figure text-center">
-  				<img src="{{ site.url }}/assets/img/{{ page.img }}" class="class="img-fit-cover" alt="Печать {{ page.title }}">
+  		<div class="column pechat">
+  			<figure class="figure text-center">          
+            <div class="eskiz eskiz-svg" style="background: url('{{ site.url }}/uploads/{{ page.img }}.png') 50% 50% no-repeat">
+              <svg viewBox="0 0 375 375" class="img-fit-cover eskiz" alt="Печать {{ page.title }}" xmlns="http://www.w3.org/2000/svg” xmlns:xlink="http://www.w3.org/1999/xlink" v-bind:style="{ fill: stamp_color }">  
+               <use xlink:href="{{ site.url }}/uploads/{{ page.img }}.svg#segment"></use>
+            </svg>
+          </div>
+          
   				<figcaption class="figure-caption text-center">Эскиз печати №{{ page.title }}</figcaption>
   			</figure>
+        <div class="text-center">
+          {% for c in site.data.app.stamp_colors %}
+            <div class="stamp_color c-hand" @mouseover="stamp_color='{{ c[1].color }}'" @mouseleave="stamp_color='black'" style="background-color: {{ c[1].color }} "> </div>
+          {% endfor %}
+        </div>
+        <div class="osnastka" v-if="osnastka === '0'"> </div>
+        <div class="osnastka" v-if="osnastka === 'auto'"><img src="{{ site.url }}/assets/r45.png" alt=""></div>
+        <div class="osnastka" v-if="osnastka === 'mini'"><img src="{{ site.url }}/assets/59599.jpeg" alt=""></div>
+        <div class="osnastka" v-if="osnastka === 'manual'"><img src="{{ site.url }}/assets/grm-ruch-tab-rtkv40.jpg" alt=""></div>
   			<h6>Доставка</h6>
-			Курьерская по Киеву. <br>
-			Новой почтой в любой город Украины - 1 сутки <br>
-			Или забрать по нашему адресу 
-      <figure class="figure text-center" style="width:294px;">
-        <img src="{{ site.url }}/assets/payment@2x.png" class="img-responsive" alt="">
-      </figure>
+  			Курьерская по Киеву. <br>
+  			Новой почтой в любой город Украины - 1 сутки <br>
+  			Или забрать по нашему адресу 
+        <div class="py-2"></div>
+        <h6>Оплата</h6>
+        Наличными при получнии или в отделении Новой Почты
+        <figure class="figure text-center" style="width:294px;">
+          <img src="{{ site.url }}/assets/payment@2x.png" class="img-responsive" alt="">
+        </figure>
   		</div>
   		<div class="column py-2">
   			<h2 class="h4 text-bold">Печать {{ page.categories }} {{ page.title }}</h2> 
   			<span class="h5 text-primary">{{ page.price }} грн</span>
   			<span class="text-gray">{{ content }}</span>
-  			<i>Выбрать оснатку</i>
-			<div class="form-group">
-			  <select class="form-select">
-			    <option>Choose an option</option>
-			    <option selected>Slack</option>
-			    <option>Skype</option>
-			    <option>Hipchat</option>
-			  </select>
-			</div>
-			<button class="btn btn-primary btn-lg">Сделать заказ</button>
+        {% if page.url contains '/izgotovlenie-pechatej-dlya-advokatov/' %}
+          <div id="docs" :class="{'flashing': flash }">
+            <strong>Необходимые документы:</strong>
+            <ol>
+            {% for d in site.data.app.required_docs.advokat %}
+              <li>{{ d }}</li>
+            {% endfor %}
+            </ol>
+          </div>
+        {% endif %}
+        {% if page.url contains '/pechat-predprinimatelya/' %}
+          <div id="docs" :class="{'flashing': flash }">
+            <strong>Необходимые документы:</strong>
+            <ol>
+            {% for d in site.data.app.required_docs.predprinimatel %}
+              <li>{{ d }}</li>
+            {% endfor %}
+            </ol>
+          </div>
+        {% endif %}
+        {% if page.url contains '/pechati-yuridicheskix-lic-ooo-chp-chao-pat-i-dr/' %}
+          <div id="docs" :class="{'flashing': flash }">
+            <strong>Необходимые документы:</strong>
+            <ol>
+            {% for d in site.data.app.required_docs.yurlica %}
+              <li>{{ d }}</li>
+            {% endfor %}
+            </ol>
+          </div>
+        {% endif %}
+        {% if page.url contains '/izgotovlenie-pechatej-dlya-vrachej/' %}
+          <div id="docs" :class="{'flashing': flash }">
+            <strong>Необходимые документы:</strong>
+            <ol>
+            {% for d in site.data.app.required_docs.doctors %}
+              <li>{{ d }}</li>
+            {% endfor %}
+            </ol>
+          </div>
+        {% endif %}
+        <div class="py-2"></div>
+        <form action="https://formspree.io/m0934359347@gmail.com" method="POST">
+          <input type="text" name="product" value="Печать {{ page.categories }} {{ page.title }}" hidden>
+    			<i>Выбрать оснатку</i>
+    			<div class="form-group">
+    			  <select class="form-select" name="osnastka" v-model="osnastka">
+    			    <option value="0">Без оснастки</option>
+    			    <option value="auto" selected>Автоматическая оснастка &mdash; 99 грн</option>
+    			    <option value="mini">Карманная оснастка &mdash; 79 грн</option>
+    			    <option value="manual">Ручная оснастка &mdash; 29 грн</option>
+    			  </select>
+    			</div>
+          <div class="py-2"></div>
+          <i>Выбрать краску</i>
+          <div class="form-group">
+            {% for c in site.data.app.stamp_colors %}
+              <label class="form-checkbox">
+                <input type="checkbox" name="{{ c[1].color }}" value="{{ c[1].color }}" v-model="stamp_colors">
+                <i class="form-icon"></i> {{ c[1].name }}
+              </label>
+            {% endfor %}
+          </div>
+          <div class="py-2"></div>
+          <div class="upload text-center">
+            <i>Добавьте необходимые документы</i>
+            <input type="hidden" role="uploadcare-uploader" name="my_file" />
+          </div>
+          <div class="form-group">
+            <i><label class="form-label" for="phone">Телефон</label></i>
+            <input class="form-input" type="text" pattern="\d*" name="phone" v-model="phone" id="phone" placeholder="(0XX) XXX-XXXX">
+          </div>
+          <label class="form-checkbox">
+            <input type="checkbox" value="agree" v-model="checked">
+            <i class="form-icon"></i> <small><b>Я загрузил(a) </b> все <a href="#docs" v-on:click="flash=!flash">необходимые документы</a></small>
+          </label>
+    			<button class="btn btn-primary btn-lg" :disabled="!isDisabled">Сделать заказ</button>
+        </form>
   		</div>
   	</div>
-   
+  
   </div>
 

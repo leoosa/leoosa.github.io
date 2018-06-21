@@ -12,13 +12,30 @@
       ga('send', 'pageview');
     </script>
   {% endif %}
-  {% include topbar.html %}
-  {% include header.html %}
-  <div class="main">
+  <div class="main" id="app">
+    {% include topbar.html %}
+    {% include header.html %}
     {{ content }}
+    {% include footer.html %}
+    <div class="modal modal-lg" :class="{ 'active': menu }" id="modal-id">
+      <a href="#close" class="modal-overlay" aria-label="Close"></a>
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="modal-title h5 text-gray">Навигация</div>
+        </div>
+        <div class="modal-body">
+          <div class="content">
+            {% include mobile_nav.html %}
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-link text-dark" @click="menu=!menu">Закрыть <i class="icon icon-cross"></i></button>
+        </div>
+      </div>
+    </div>
   </div>
-  {% include footer.html %}
   
+  <script src="{{ site.url }}/js/app.js"></script>
   <script src="{{ site.url }}/js/bundle.js"></script>
   </body>
 </html>

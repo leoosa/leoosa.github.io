@@ -1,6 +1,6 @@
 <header class="navbar wrapper" id="nav">
 	<section class="navbar-section">
-		<button class="btn btn-link btn-action btn-lg mx-2 show-md" @click="nav = !nav">
+		<button class="btn btn-link btn-action btn-lg mx-2 show-md" @click="menu = !menu">
           <i class="icon icon-menu"></i><span class="d-invisible">Меню</span>
         </button>
 	    <a href="/" alt="{{ site.title }}" class="navbar-brand mr-2">
@@ -85,21 +85,15 @@
 					</a>
 				</li>
 				<li class="menu-item">
-					<a href="#"
+					<a href="{{ site.url }}/izgotovlenie-pechatej/izgotovlenie-relefnyx-pechatej/"
 					alt="Изготовление рельефных печатей">
 						Изготовление рельефных печатей
 					</a>
 				</li>
 				<li class="menu-item">
-					<a href="#"
+					<a href="{{ site.url }}/izgotovlenie-pechatej/izgotovlenie-pechati-po-ottisku/"
 					alt="Изготовление печатей по оттиску">
 						Изготовление печатей по оттиску
-					</a>
-				</li>
-				<li class="menu-item">
-					<a href="#"
-					alt="Восстановление печатей">
-						Восстановление печатей
 					</a>
 				</li>
 			</ul>

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="bg-gray text-center hero-unit" style="background: #{{ page.color }};">
+<div class="bg-gray text-center wrapper hero-unit" style="background: #{{ page.color }};">
     {% if page.title %}
       <div class="jumbotron" style="color: #{{ page.text-color }}">
         <h1>{{ page.title }}</h1>
@@ -19,27 +19,43 @@ layout: default
 	<div class="container">
 		<div class="columns">
 			{% for item in site.pechati %}
-			<div class="column text-center">
+			<div class="column text-center pechat">
 				<a href="{{ item.url }}">
 				<figure class="figure text-center">
-	  				<img src="{{ site.url }}/assets/img/{{ item.img }}" class="img-fit-cover" alt="Печать {{ item.title }}">
+					<img src="{{ site.url }}/uploads/{{ item.img }}.png" class="img-fit-cover eskiz" alt="Печать {{ item.title }}">
 	  				<figcaption class="figure-caption text-center">Эскиз печати №{{ item.title }}</figcaption>
 	  			</figure>
-				<h5 class="h6">Печать {{ item.categories }} {{ item.title }}</h5>
+				<h5 class="h6">Печать {{ item.categories }}</h5>
 				<p>{{ item.description }}</p>
 				</a>	
 			</div>
 			{% endfor %}
 		</div>
-	</div>
-		
+	</div>		
+	{% endif %}
+
+	{% if page.url == "/izgotovlenie-pechatej/pechat-predprinimatelya/" %}
+		{% assign pechati = site.pechati | where:"categories","для предпринимателей" %}
+		{% include stamp_list.html %} 
+	{% endif %}
+	{% if page.url == "/izgotovlenie-pechatej/pechati-yuridicheskix-lic-ooo-chp-chao-pat-i-dr/" %}
+		{% assign pechati = site.pechati | where:"categories","для юрлиц" %}
+		{% include stamp_list.html %}
+	{% endif %}
+	{% if page.url == "/izgotovlenie-pechatej/izgotovlenie-pechatej-dlya-vrachej/" %}
+		{% assign pechati = site.pechati | where:"categories","для врачей" %}
+		{% include stamp_list.html %}	
+	{% endif %}
+	{% if page.url == "/izgotovlenie-pechatej/izgotovlenie-pechatej-dlya-advokatov/" %}
+		{% assign pechati = site.pechati | where:"categories","для адвокатов" %}
+		{% include stamp_list.html %}
 	{% endif %}
     {{ content }}
     {% if page.url == "/izgotovlenie-pechatej/" %}
 	<div class="container">
 		<div class="columns">
 			{% for item in site.places %}
-			<div class="column text-center">
+			<div class="column text-center place">
 				<a href="{{ item.url }}">
 					<h5 class="h6">Изготовление печатей {{ item.title }}</h5>
 				</a>	
