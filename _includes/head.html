@@ -5,13 +5,7 @@
 
   {% seo %}
   <link rel="stylesheet" href="{{ site.url }}/css/main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js" integrity="sha256-uZ4EDTJw1LV+sBeXsbqHz8+UYjwTXanpjnikoKeB4ow=" crossorigin="anonymous"></script>
-  <script>	
-  	UPLOADCARE_PUBLIC_KEY = "demopublickey";
-  	UPLOADCARE_LOCALE = 'ru';
-  	UPLOADCARE_TABS = 'file url gdrive';
-  </script>
-  <script src="https://ucarecdn.com/libs/widget/3.3.0/uploadcare.full.min.js" charset="utf-8"></script>
+  {% include head_scripts.html %}
 <!--   <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-iphone-60x60.png">
   <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-ipad-76x76.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-iphone-retina-120x120.png">
