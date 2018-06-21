@@ -478,7 +478,7 @@
             <input type="checkbox" value="agree" v-model="checked">
             <i class="form-icon"></i> <small><b>Я загрузил(a) </b> все <a href="#docs" v-on:click="flash=!flash">необходимые документы</a></small>
           </label>
-    			<button class="btn btn-primary btn-lg" id="place-order" :disabled="!isDisabled">Сделать заказ</button>
+    			<button class="btn btn-primary btn-lg" id="place-order" formtarget="_blank" :disabled="!isDisabled">Сделать заказ</button>
         </form>
   		</div>
   	</div>
