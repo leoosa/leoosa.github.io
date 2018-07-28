@@ -26,19 +26,23 @@ layout: default
         <div class="osnastka" v-if="osnastka === 'mini'"><img src="{{ site.url }}/assets/59599.jpeg" alt=""></div>
         <div class="osnastka" v-if="osnastka === 'manual'"><img src="{{ site.url }}/assets/grm-ruch-tab-rtkv40.jpg" alt=""></div>
   			<h6>Доставка</h6>
-  			Курьерская по Киеву. <br>
+  			<small>Курьерская по Киеву - 50грн. <br>
+          Бесплатная от 500грн<br>
   			Новой почтой в любой город Украины - 1 сутки <br>
-  			Или забрать по нашему адресу 
+  			Или забрать по нашему адресу: г. Киев, проспект Оболонский 20-А  </small>
         <div class="py-2"></div>
         <h6>Оплата</h6>
-        Наличными при получнии или в отделении Новой Почты
+        <small>Наличными при получнии или в отделении Новой Почты</small>
         <figure class="figure text-center" style="width:294px;">
           <img src="{{ site.url }}/assets/payment@2x.png" class="img-responsive" alt="">
         </figure>
+        <h6>Время изготовления</h6>
+        <small>По Киеву изготавлием и доставляем в тот же или на след. день. По Украине в соответствии с доставкой Новой Почты</small>
+        
   		</div>
   		<div class="column py-2">
   			<h2 class="h4 text-bold">Печать {{ page.categories }} {{ page.title }}</h2> 
-  			<span class="h5 text-primary">{{ page.price }} грн</span>
+  			<span class="h5 text-primary">{{ site.data.app.prices.cliche }} грн</span>
   			<span class="text-gray">{{ content }}</span>
         {% if page.url contains '/izgotovlenie-pechatej-dlya-advokatov/' %}
           <div id="docs" :class="{'flashing': flash }">
@@ -87,25 +91,25 @@ layout: default
     			<div class="form-group">
     			  <select class="form-select" name="osnastka" v-model="osnastka">
     			    <option value="0">Без оснастки</option>
-    			    <option value="auto" selected>Автоматическая оснастка &mdash; 99 грн</option>
-    			    <option value="mini">Карманная оснастка &mdash; 79 грн</option>
-    			    <option value="manual">Ручная оснастка &mdash; 29 грн</option>
+    			    <option value="auto" selected>Автоматическая &mdash; {{ site.data.app.prices.auto }} грн</option>
+    			    <option value="mini">Карманная &mdash; {{ site.data.app.prices.mini }} грн</option>
+    			    <option value="manual">Ручная &mdash; {{ site.data.app.prices.manual }} грн</option>
     			  </select>
     			</div>
-          <div class="py-2"></div>
+          <!--<div class="py-2"></div>
           <i>Выбрать краску</i>
-          <div class="form-group">
+           <div class="form-group">
             {% for c in site.data.app.stamp_colors %}
               <label class="form-checkbox">
                 <input type="checkbox" name="{{ c[1].color }}" value="{{ c[1].color }}" v-model="stamp_colors">
                 <i class="form-icon"></i> {{ c[1].name }}
               </label>
             {% endfor %}
-          </div>
+          </div> -->
           <div class="py-2"></div>
           <div class="upload text-center">
             <i>Добавьте необходимые документы</i>
-            <input type="hidden" role="uploadcare-uploader" name="my_file" />
+            <input type="hidden" role="uploadcare-uploader" name="my_file" data-multiple="true" />
           </div>
           <div class="form-group">
             <i><label class="form-label" for="phone">Телефон</label></i>

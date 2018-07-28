@@ -83,6 +83,21 @@ a:visited {
 		&:hover, &:active {
 			color: $light-color;
 		}
+		> .icon:not(i) {
+		    fill: white;
+		    width: 1.25rem;
+		    height: auto;
+		    max-height: 2rem;
+		    margin: .25rem;
+		    transition:all .3s;
+		    &:hover {
+		    	transform:scale(1.1);
+		    }
+		    &:active, &:focus {
+				transform:scale(.98);
+				opacity:.9;
+		    }
+		}
 	}
 	.dropdown .menu > li > a {
 		color:$dark-color;

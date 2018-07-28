@@ -53,9 +53,17 @@
       max-height:80vh;
     }
     .content > a {
-        margin-top: .45rem;
-        display: inline-block;
-        color: gray;
+      margin-top: .2rem;
+      display: inline-block;
+      color: gray;
+      font-size: .5rem;
+      margin-top: .33rem;
+    }
+    h5 {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      display: inline-block;
+      min-width: 14rem;
     }
   }
   .pechat .figure .eskiz {

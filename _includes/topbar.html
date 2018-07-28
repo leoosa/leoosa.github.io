@@ -2,10 +2,20 @@
 	<div class="wrapper">
 		<div class="columns navbar col-gapless">
 			<div class="navbar-section">
-				Задайте вопрос
-				<a href="#">Telegram</a>
-				<a href="#">Messenger</a>
-				<a href="#">Viber</a>
+				<div class="col-xs-2 col-md-auto col-lg-4">Задайте вопрос</div>
+				{% for m in site.data.app.messengers %}
+					<a href="{{ m[1].link }}" class="tooltip tooltip-bottom" target="_blank" alt="{{ m[1].name }}" data-tooltip="{{ m[1].name }}">
+						<svg class="icon icon-telegram">
+							<use xlink:href="{{ site.url }}/assets/icons/symbol-defs.svg#{{ m[1].icon }}"></use>
+						</svg>
+					</a>
+	            {% endfor %}
+	            <a href="tel:{{ site.data.app.phones }}" class="show-xs">
+					<svg class="icon icon-phone-outline">
+						<use xlink:href="{{ site.url }}/assets/icons/symbol-defs.svg#icon-phone-outline"></use>
+					</svg>
+					{{ site.data.app.phones }}
+				</a>
 			</div>
 			<div class="navbar-section hide-md"><div class="tile tile-centered">
 			  <div class="tile-icon">
