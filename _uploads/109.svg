@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X6 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="23.1986mm" height="23.1986mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="375" height="375" viewBox="0 0 375 375" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
 viewBox="0 0 2320 2320"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
@@ -18,7 +18,7 @@ viewBox="0 0 2320 2320"
    ]]>
   </style>
  </defs>
- <g id="Слой_x0020_1">
+ <g id="Слой_x0020_1" class="segment">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <path class="fil0 str0" d="M1160 89c580,0 1049,470 1049,1050 0,579 -469,1049 -1049,1049 -579,0 -1049,-470 -1049,-1049 0,-580 470,-1050 1049,-1050z"/>
   <path class="fil0" d="M1160 269c481,0 871,393 871,878 0,485 -390,878 -871,878 -481,0 -871,-393 -871,-878 0,-485 390,-878 871,-878z"/>
