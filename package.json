@@ -8,6 +8,7 @@
   "scripts": {
     "packit": "webpack --watch",
     "buildit": "bundle exec jekyll build --watch --incremental",
+    "dev": "bundle exec jekyll build --config _config.yml,_dev.yml & npm run packit",
     "jekyllfy": "npm run packit & npm run buildit & npm run serve",
     "serve": "browser-sync start --config browser-sync.js"
   },
