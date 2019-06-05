@@ -47,7 +47,7 @@ messengers:
   telegram: 
     name: Telegram
     icon: icon-telegram
-    link: tg://resolve?domain=stampstore
+    link: tg://resolve?domain=Grandstamp
   viber: 
     name: Viber
     icon: icon-viber

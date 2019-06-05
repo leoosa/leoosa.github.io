@@ -4,7 +4,7 @@
 			<div class="navbar-section">
 				<div class="col-xs-2 col-md-auto col-lg-4">Задайте вопрос</div>
 				{% for m in site.data.app.messengers %} 
-					<a href="{{ m[1].link }}" class="tooltip tooltip-bottom" target="_blank" alt="{{ m[1].name }}" data-tooltip="{{ m[1].name }}">
+					<a href="{{ m[1].link }}" class="tooltip tooltip-bottom" target="_blank" alt="{{ m[1].name }}" data-tooltip="{{ m[1].name }}">   
 						<svg class="icon icon-telegram">
 							<use xlink:href="{{ site.url }}/assets/icons/symbol-defs.svg#{{ m[1].icon }}"></use>
 						</svg>
