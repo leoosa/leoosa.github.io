@@ -51,7 +51,7 @@ messengers:
   viber: 
     name: Viber
     icon: icon-viber
-    link: viber://chat?number=+38xxxxxxxxxx
+    link: viber://chat?number=+380632251928
 prices:
   cliche: 149
   auto: 100
